@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Career Advisor System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>🎯 AI Career Advisor System</h1>
+            <p>Analyze your skills and get personalized career guidance</p>
+        </header>
+
+        <!-- Input Section -->
+        <div class="input-section">
+            <div class="form-group">
+                <label for="careerGoal">🎓 Select Career Goal:</label>
+                <select id="careerGoal">
+                    <option value="">-- Choose a Career Path --</option>
+                    <option value="Full Stack Developer">Full Stack Developer</option>
+                    <option value="Data Scientist">Data Scientist</option>
+                    <option value="Mobile App Developer">Mobile App Developer</option>
+                    <option value="DevOps Engineer">DevOps Engineer</option>
+                    <option value="AI/ML Engineer">AI/ML Engineer</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="currentSkills">💼 Your Current Skills (comma-separated):</label>
+                <textarea 
+                    id="currentSkills" 
+                    placeholder="e.g., Java, SQL, HTML, CSS"
+                    rows="3"
+                ></textarea>
+            </div>
+
+            <button id="analyzeBtn" class="btn-primary">🔍 Analyze My Profile</button>
+        </div>
+
+        <!-- Results Section -->
+        <div id="results" class="results hidden">
+            <!-- Career Goal Display -->
+            <div class="result-card">
+                <h2>🎯 Career Goal</h2>
+                <p id="displayGoal" class="career-goal-text"></p>
+            </div>
+
+            <!-- Skills Found -->
+            <div class="result-card skills-found">
+                <h2>✅ Skills You Have</h2>
+                <div id="foundSkills" class="skills-list"></div>
+            </div>
+
+            <!-- Missing Skills -->
+            <div class="result-card skills-missing">
+                <h2>❌ Skills You Need</h2>
+                <div id="missingSkills" class="skills-list"></div>
+            </div>
+
+            <!-- Recommended Internships -->
+            <div class="result-card internships">
+                <h2>💼 Recommended Internships</h2>
+                <div id="internshipList" class="internship-list"></div>
+            </div>
+
+            <!-- Learning Roadmap -->
+            <div class="result-card roadmap">
+                <h2>🗺️ Learning Roadmap</h2>
+                <ol id="roadmapList" class="roadmap-list"></ol>
+            </div>
+
+            <!-- Reset Button -->
+            <button id="resetBtn" class="btn-secondary">🔄 Start Over</button>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

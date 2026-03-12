@@ -1,0 +1,10 @@
+ # Windows
+Thumbs.db
+*.lnk
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
